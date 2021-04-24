@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: user
+          uri: http://localhost:8991
+# eureka config
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
