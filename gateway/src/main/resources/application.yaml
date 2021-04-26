@@ -2,10 +2,14 @@ spring:
   cloud:
     gateway:
       routes:
-        - id: user
-          uri: http://localhost:8991
+      - id: system
+        uri: http://localhost:9200
+        predicates:
+        - Path=/system/**
 # eureka config
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:9100/eureka
+server:
+  port: 9101
