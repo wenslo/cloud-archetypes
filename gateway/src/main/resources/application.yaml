@@ -11,12 +11,3 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8761/eureka
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty: DEBUG
-okta:
-  oauth2:
-    issuer: https://dev-7422039.okta.com/oauth2/default
-    client-id: 0oao1hi0zDSQwBTFT5d6
-    client-secret: JFqSII3b1Imh6iRnuP1bpC1Xv2pbOBwd3k-vIBW
