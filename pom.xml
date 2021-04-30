@@ -20,6 +20,7 @@
         <module>eureka</module>
         <!-- 网关 -->
         <module>gateway</module>
+        <module>authorization</module>
     </modules>
 
     <properties>
