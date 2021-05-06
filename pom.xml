@@ -21,6 +21,7 @@
         <!-- 网关 -->
         <module>gateway</module>
         <module>authorization</module>
+        <module>resource</module>
     </modules>
 
     <properties>

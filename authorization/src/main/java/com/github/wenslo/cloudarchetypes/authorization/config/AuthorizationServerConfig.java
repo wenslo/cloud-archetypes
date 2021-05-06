@@ -14,6 +14,7 @@ import org.springframework.security.oauth2.core.oidc.OidcScopes;
 import org.springframework.security.oauth2.server.authorization.client.InMemoryRegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
+import org.springframework.security.oauth2.server.authorization.config.ProviderSettings;
 
 import java.security.KeyPair;
 import java.security.KeyPairGenerator;
@@ -40,6 +41,7 @@ public class AuthorizationServerConfig {
                 .build();
         return new InMemoryRegisteredClientRepository(registeredClient);
     }
+
     @Bean
     public JWKSource<SecurityContext> jwkSource() throws NoSuchAlgorithmException {
         RSAKey rsaKey = generateRsa();
@@ -49,7 +51,7 @@ public class AuthorizationServerConfig {
 
     private static RSAKey generateRsa() throws NoSuchAlgorithmException {
         KeyPair keyPair = generateRskKey();
-        RSAPublicKey publicKey =(RSAPublicKey) keyPair.getPublic();
+        RSAPublicKey publicKey = (RSAPublicKey) keyPair.getPublic();
         RSAPrivateKey privateKey = (RSAPrivateKey) keyPair.getPrivate();
         return new RSAKey.Builder(publicKey).privateKey(privateKey)
                 .keyID(UUID.randomUUID().toString())
@@ -61,5 +63,9 @@ public class AuthorizationServerConfig {
         keyPairGenerator.initialize(2048);
         return keyPairGenerator.generateKeyPair();
     }
-
+    
+    @Bean
+    public ProviderSettings providerSettings() {
+        return new ProviderSettings().issuer("http://127.0.0.1:9000");
+    }
 }
