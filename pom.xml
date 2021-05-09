@@ -20,13 +20,13 @@
         <module>eureka</module>
         <!-- 网关 -->
         <module>gateway</module>
-        <module>system</module>
-        <module>core</module>
+        <module>authorization</module>
+        <module>resource</module>
     </modules>
 
     <properties>
         <java.version>1.8</java.version>
-        <spring-cloud.version>2020.0.2</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR11</spring-cloud.version>
         <lombok.version>1.18.20</lombok.version>
         <hutool.version>5.6.3</hutool.version>
         <guava.version>30.1-jre</guava.version>
