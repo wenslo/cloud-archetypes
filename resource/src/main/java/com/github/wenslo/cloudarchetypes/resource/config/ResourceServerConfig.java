@@ -8,10 +8,11 @@ import org.springframework.security.web.SecurityFilterChain;
 @EnableWebSecurity
 public class ResourceServerConfig {
     @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
-        http.mvcMatcher("/articles/**")
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http
+                .mvcMatcher("/messages/**")
                 .authorizeRequests()
-                .mvcMatchers("/articles/**").access("hasAuthority('SCOPE_articles.read')")
+                .mvcMatchers("/messages/**").access("hasAuthority('SCOPE_message.read')")
                 .and()
                 .oauth2ResourceServer()
                 .jwt();

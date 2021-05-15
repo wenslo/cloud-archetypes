@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ArticlesApplication {
+public class MessagesApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ArticlesApplication.class, args);
+        SpringApplication.run(MessagesApplication.class, args);
     }
 }

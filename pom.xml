@@ -22,7 +22,7 @@
         <module>gateway</module>
         <module>authorization</module>
         <module>resource</module>
-        <module>articles</module>
+        <module>messages</module>
     </modules>
 
     <properties>

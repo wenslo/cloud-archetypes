@@ -29,6 +29,7 @@ public class DefaultSecurityConfig {
         UserDetails user = User.withDefaultPasswordEncoder()
                 .username("admin")
                 .password("password")
+                .roles("USER")
                 .build();
         return new InMemoryUserDetailsManager(user);
     }
