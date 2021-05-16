@@ -1,4 +1,4 @@
-package com.github.wenslo.cloudarthetypes.articles.controller;
+package com.github.wenslo.cloudarthetypes.messages.controller;
 
 
 import org.springframework.beans.factory.annotation.Value;
