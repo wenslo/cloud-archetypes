@@ -20,9 +20,14 @@
         <module>eureka</module>
         <!-- 网关 -->
         <module>gateway</module>
+        <!-- 认证服务 -->
         <module>authorization</module>
+        <!-- 资源服务 -->
         <module>resource</module>
+        <!-- client -->
         <module>messages</module>
+        <module>core</module>
+        <module>system</module>
     </modules>
 
     <properties>
